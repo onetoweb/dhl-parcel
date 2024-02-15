@@ -61,4 +61,5 @@ Endpoint Examples
 =================
 
  * `Capability <capability.rst>`_
+ * `Transit Time <transit_time.rst>`_
  * `Translation <translation.rst>`_
