@@ -60,4 +60,5 @@ Setup
 Endpoint Examples
 =================
 
-* `Capability <capability.rst>`_
+ * `Capability <capability.rst>`_
+ * `Translation <translation.rst>`_
