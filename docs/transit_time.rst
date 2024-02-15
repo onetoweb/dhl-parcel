@@ -28,7 +28,7 @@ List transit times
         'toPostalCode' => '3542 AD',
         'toCity' => 'Bonn',
         'returnProduct' => false,
-        'carrier' => 'DHL-PARCEL',
+        'carrier' => 'DHL-PARCEL', // available values : DHL-PARCEL, DHL-EXPRESS, SPEEDPACK
         'shipmentDate' => '2018-02-02',
     ]);
 
