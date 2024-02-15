@@ -5,7 +5,7 @@ namespace Onetoweb\DhlParcel;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Client as GuzzleCLient;
 use Onetoweb\DhlParcel\Endpoint\Endpoints;
-use Onetoweb\DhlParcel\Token\{AccessToken, RefreshToken};
+use Onetoweb\DhlParcel\Token\Tokens\{AccessToken, RefreshToken};
 use DateTime;
 
 /**
@@ -92,6 +92,14 @@ class Client
     }
     
     /**
+     * @return AccessToken|null
+     */
+    public function getAccessToken(): ?AccessToken
+    {
+        return $this->accessToken;
+    }
+    
+    /**
      * @param RefreshToken $refreshToken
      *
      * @return void
@@ -99,6 +107,14 @@ class Client
     public function setRefreshToken(RefreshToken $refreshToken): void
     {
         $this->refreshToken = $refreshToken;
+    }
+    
+    /**
+     * @return RefreshToken|null
+     */
+    public function getRefreshToken(): ?RefreshToken
+    {
+        return $this->refreshToken;
     }
     
     /**
@@ -168,7 +184,9 @@ class Client
         $this->refreshToken = new RefreshToken($tokenArray['refreshToken'], (new DateTime())->setTimestamp($tokenArray['refreshTokenExpiration']));
         
         // token update callback
-        ($this->tokenUpdateCallback)($this->accessToken, $this->refreshToken);
+        if ($this->tokenUpdateCallback !== null) {
+            ($this->tokenUpdateCallback)($this->accessToken, $this->refreshToken);
+        }
     }
     
     /**
