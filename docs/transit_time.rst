@@ -11,7 +11,7 @@ Transit Time
     :local:
 
 
-List Transit Times
+List transit times
 ``````````````````
 
 .. code-block:: php
