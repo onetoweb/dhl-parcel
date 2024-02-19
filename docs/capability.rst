@@ -29,7 +29,7 @@ List capabilities
         'toPostalCode' => '3542 AD',
         'organisationId' => '79944763-1249-4cae-a7bb-7aacec8deb47',
         'businessUnit' => 'dhl-nl',
-        'carrier' => 'DHL-PARCEL', // available values : DHL-PARCEL, DHL-EXPRESS, SPEEDPACK
+        'carrier' => 'DHL-PARCEL', // available values: DHL-PARCEL, DHL-EXPRESS, SPEEDPACK
         'referenceTimeStamp' => '2018-02-02',
         'quantity' => 7,
     ]);

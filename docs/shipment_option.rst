@@ -19,7 +19,7 @@ List shipment options
     $senderType = 'business'; // available values: business, consumer, parcelShop
     $result = $client->shipmentOption->list($senderType, [
         // optional parameters
-        'carrier' => 'DHL-PARCEL', // available values : DHL-PARCEL, DHL-EXPRESS, SPEEDPACK
+        'carrier' => 'DHL-PARCEL', // available values: DHL-PARCEL, DHL-EXPRESS, SPEEDPACK
         'fromCountry' => 'NL',
         'businessUnit' => 'dhl-nl',
         'whitelistRequired' => true,

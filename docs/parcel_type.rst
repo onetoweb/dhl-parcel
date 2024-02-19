@@ -1,35 +1,33 @@
 .. _top:
-.. title:: Transit Time
+.. title:: Parcel type
 
 `Back to index <index.rst>`_
 
-============
-Transit Time
-============
+===========
+Parcel type
+===========
 
 .. contents::
     :local:
 
 
-List transit times
-``````````````````
+List parcel types
+`````````````````
 
 .. code-block:: php
     
     $senderType = 'business'; // available values: business, consumer, parcelShop
-    $result = $client->transitTime->list($senderType, [
+    $fromCountry = 'NL';
+    $result = $client->parcelType->list($senderType, $fromCountry, [
         // optional parameters
-        'fromCountry' => 'NL',
         'toCountry' => 'BE',
         'businessUnit' => 'dhl-nl',
+        'fromPostalCode' => '3814VL',
+        'toPostalCode' => '3814VL',
         'toBusiness' => true,
-        'product' => 'DFY-INT',
-        'parcelType' => 'SMALL',
-        'toPostalCode' => '3542 AD',
-        'toCity' => 'Bonn',
         'returnProduct' => false,
         'carrier' => 'DHL-PARCEL', // available values: DHL-PARCEL, DHL-EXPRESS, SPEEDPACK
-        'shipmentDate' => '2018-02-02',
+        'accountNumber' => '12345678',
     ]);
 
 
