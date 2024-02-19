@@ -62,6 +62,7 @@ Endpoint Examples
 
 * `Capability <capability.rst>`_
 * `Destination country <destination_country.rst>`_
+* `Draft <draft.rst>`_
 * `Product <product.rst>`_
 * `Parcel type <parcel_type.rst>`_
 * `Parcelshop location <parcelshop_location.rst>`_

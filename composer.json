@@ -18,7 +18,8 @@
     "require": {
         "php": ">=7.1.0",
         "guzzlehttp/guzzle" : "^6.0 || ^7.0",
-        "symfony/polyfill-php80": "^1.29"
+        "symfony/polyfill-php80": "^1.29",
+        "ramsey/uuid": "^4.2"
     },
     "require-dev": {
         "symfony/error-handler": "^5.1"
