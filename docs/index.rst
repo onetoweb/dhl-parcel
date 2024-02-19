@@ -61,10 +61,11 @@ Endpoint Examples
 =================
 
 * `Capability <capability.rst>`_
+* `Destination country <destination_country.rst>`_
 * `Product <product.rst>`_
-* `Parcel Type <parcel_type.rst>`_
-* `Parcelshop Location <parcelshop_location.rst>`_
-* `Shipment Option <shipment_option.rst>`_
-* `Time Window <time_window.rst>`_
-* `Transit Time <transit_time.rst>`_
+* `Parcel type <parcel_type.rst>`_
+* `Parcelshop location <parcelshop_location.rst>`_
+* `Shipment option <shipment_option.rst>`_
+* `Time window <time_window.rst>`_
+* `Transit time <transit_time.rst>`_
 * `Translation <translation.rst>`_
