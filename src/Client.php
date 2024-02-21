@@ -83,7 +83,7 @@ class Client
     
     /**
      * @param AccessToken $accessToken
-     *
+     * 
      * @return void
      */
     public function setAccessToken(AccessToken $accessToken): void
@@ -101,7 +101,7 @@ class Client
     
     /**
      * @param RefreshToken $refreshToken
-     *
+     * 
      * @return void
      */
     public function setRefreshToken(RefreshToken $refreshToken): void
@@ -119,7 +119,7 @@ class Client
     
     /**
      * @param string $endpoint
-     *
+     * 
      * @return string
      */
     public static function getUrl(string $endpoint): string
@@ -175,13 +175,15 @@ class Client
     }
     
     /**
+     * @param array $tokenArray
+     * 
      * @return void
      */
     private function updateToken(array $tokenArray): void
     {
         // set tokens
-        $this->accessToken = new AccessToken($tokenArray['accessToken'], (new DateTime())->setTimestamp($tokenArray['accessTokenExpiration']));
-        $this->refreshToken = new RefreshToken($tokenArray['refreshToken'], (new DateTime())->setTimestamp($tokenArray['refreshTokenExpiration']));
+        $this->accessToken = new AccessToken($tokenArray['accessToken'], (new DateTime())->setTimestamp($tokenArray['accessTokenExpiration'] - 60));
+        $this->refreshToken = new RefreshToken($tokenArray['refreshToken'], (new DateTime())->setTimestamp($tokenArray['refreshTokenExpiration'] - 60));
         
         // token update callback
         if ($this->tokenUpdateCallback !== null) {
@@ -192,7 +194,7 @@ class Client
     /**
      * @param string $endpoint
      * @param array $query = []
-     *
+     * 
      * @return array|null
      */
     public function get(string $endpoint, array $query = []): ?array
@@ -202,18 +204,19 @@ class Client
     
     /**
      * @param string $endpoint
+     * @param array $data = []
      * @param array $query = []
-     *
+     * 
      * @return array|null
      */
-    public function post(string $endpoint, array $data = []): ?array
+    public function post(string $endpoint, array $data = [], array $query = []): ?array
     {
         return $this->request(self::METHOD_POST, $endpoint, $data);
     }
     
     /**
      * @param string $endpoint
-     *
+     * 
      * @return array|null
      */
     public function delete(string $endpoint): ?array
