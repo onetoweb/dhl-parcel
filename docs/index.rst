@@ -67,6 +67,7 @@ Endpoint Examples
 * `Parcel type <parcel_type.rst>`_
 * `Parcelshop location <parcelshop_location.rst>`_
 * `Shipment option <shipment_option.rst>`_
+* `Shipment <shipment.rst>`_
 * `Time window <time_window.rst>`_
 * `Transit time <transit_time.rst>`_
 * `Translation <translation.rst>`_
