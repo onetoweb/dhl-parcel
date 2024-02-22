@@ -70,5 +70,6 @@ Endpoint Examples
 * `Shipment option <shipment_option.rst>`_
 * `Shipment <shipment.rst>`_
 * `Time window <time_window.rst>`_
+* `Track & Trace <track_trace.rst>`_
 * `Transit time <transit_time.rst>`_
 * `Translation <translation.rst>`_
