@@ -9,3 +9,4 @@
 
  - Add track & trace endpoint
  - Add piece endpoint
+ - Add pickup request endpoint
