@@ -15,3 +15,8 @@
 ## [1.0.2] - 2024-02-28
 
  - Lower polyfill-php80 requirements to 1.20
+
+
+## [1.0.3] - 2024-02-28
+
+ - Lower ramsey/uuid requirements to any version 3 or 4
