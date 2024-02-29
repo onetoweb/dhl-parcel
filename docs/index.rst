@@ -54,6 +54,9 @@ Setup
             $_SESSION['refresh_token']['expires']
         ));
     }
+    
+    // request account numbers
+    $accountNumbers = $client->requestAccountNumbers();
 
 
 =================

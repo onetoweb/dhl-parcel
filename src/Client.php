@@ -175,6 +175,35 @@ class Client
     }
     
     /**
+     * @return array|null
+     */
+    public function requestAccountNumbers(): ?array
+    {
+        // build options
+        $options = [
+            RequestOptions::HEADERS => [
+                'Content-Type' => 'application/json',
+                'Accept' => 'application/json',
+            ]
+        ];
+        
+        // add user and key to the json body
+        $options[RequestOptions::JSON] = [
+            'userId' => $this->userId,
+            'key' => $this->key
+        ];
+        
+        // make request
+        $response = (new GuzzleCLient())->request(self::METHOD_POST, self::getUrl('/authenticate/api-key/account-numbers'), $options);
+        
+        // get contents
+        $contents = $response->getBody()->getContents();
+        
+        // return account numbers
+        return json_decode($contents, true);
+    }
+    
+    /**
      * @param array $tokenArray
      * 
      * @return void
