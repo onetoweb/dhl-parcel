@@ -20,3 +20,8 @@
 ## [1.0.3] - 2024-02-28
 
  - Lower ramsey/uuid requirements to any version 3 or 4
+
+
+## [1.0.4] - 2024-02-29
+
+ - Add requestAccountNumbers to client
