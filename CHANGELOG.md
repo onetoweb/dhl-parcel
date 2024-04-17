@@ -25,3 +25,8 @@
 ## [1.0.4] - 2024-02-29
 
  - Add requestAccountNumbers to client
+
+
+## [1.0.5] - 2024-04-17
+
+ -  AllowDynamicProperties in Client to prevent php 8.2 deprecation notice
