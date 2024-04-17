@@ -11,6 +11,7 @@ use DateTime;
 /**
  * Dhl Parcel Api Client.
  */
+#[\AllowDynamicProperties]
 class Client
 {
     /**
